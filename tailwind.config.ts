@@ -1,20 +1,29 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}'
   ],
+  darkMode: 'class',
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      screens: {
+        '2xl': '1536px'
+        // 'xl'은 기본적으로 1280px
+        // 'lg'은 기본적으로 1024px
+        // 'md'은 기본적으로 768px
+        // 'sm'은 기본적으로 640px
       },
-    },
+      colors: {
+        bg: 'var(--bg)',
+        textColor: 'var(--textColor)',
+        softBg: 'var(--softBg)',
+        softTextColor: 'var(--softTextColor)'
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 };
 export default config;
